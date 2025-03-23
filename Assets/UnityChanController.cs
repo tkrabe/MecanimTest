@@ -13,6 +13,11 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // マウスがクリックされた場合
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Animatorコンポーネントを取得し、"jumpTrigger"をtrueにする
+            GetComponent<Animator>().SetTrigger("jumpTrigger");
+        }
     }
 }
